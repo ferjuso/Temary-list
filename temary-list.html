@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="temary-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `temary-list`
+     * creation of a checklist of a several topics
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class TemaryList extends Polymer.Element {
+      static get is() { return 'temary-list'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'temary-list'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(TemaryList.is, TemaryList);
+  </script>
+</dom-module>
