@@ -6,9 +6,18 @@
     <style>
       :host {
         display: block;
-      }
+      } 
+      .tachado{
+          text-decoration:line-through;}  
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div>
+        <slot name="temario"></slot>
+        <template is="dom-repeat" items="[[newTemary]]" as="section">
+            <section>
+                <paper-checkbox><h2>[[section.title]]</h2s></paper-checkbox>
+            </section>
+        </template>   
+    </div>
   </template>
 
   <script>
@@ -24,10 +33,10 @@
       static get is() { return 'temary-list'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'temary-list'
-          }
+          newTemary:{
+            type: Array,
+            value: []
+          }  
         };
       }
     }

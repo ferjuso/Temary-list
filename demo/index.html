@@ -22,7 +22,17 @@
       <h3>Basic temary-list demo</h3>
       <demo-snippet>
         <template>
-          <temary-list></temary-list>
+          <temary-list new-temary='[
+                                   {"title": "1.-Tema 1"},
+                                   {"title": "2.-Tema 2"},
+                                   {"title": "3.-Tema 3"}
+                                   ]'>
+              <div slot="temario">
+              <h1>
+                ..::TEMARIO::..
+              </h1>
+              </div>
+        </temary-list>
         </template>
       </demo-snippet>
     </div>
