@@ -23,10 +23,20 @@
       <demo-snippet>
         <template>
           <temary-list new-temary='[
-                                   {"title": "1.-Tema 1"},
-                                   {"title": "2.-Tema 2"},
-                                   {"title": "3.-Tema 3"}
-                                   ]'>
+                                    {"title" : "Tema 1", "descriptionTopic" : "algo1", "topics" : 
+                                      [
+                                        {"Subtitle" : "Tema 1.1", "descriptionSub" : "algo1.1"},
+                                        {"Subtitle" : "Tema 1.2", "descriptionSub" : "algo1.2"},
+                                        {"Subtitle" : "Tema 1.3", "descriptionSub" : "algo1.3"}
+                                      ]
+                                    },
+                                    {"title" : "Tema 2", "descriptionTopic" : "algo2", "topics" : 
+                                      [
+                                        {"Subtitle" : "Tema 2.1", "descriptionSub" : "algo2.1"},
+                                        {"Subtitle" : "Tema 2.2", "descriptionSub" : "algo2.2"}
+                                      ]
+                                    }
+                                    ]'>
               <div slot="temario">
               <h1>
                 ..::TEMARIO::..
